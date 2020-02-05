@@ -1,0 +1,428 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Rubik', sans-serif;
+    font-weight: 200;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* header.php */
+
+.logo-nav {
+    width: 70px;
+    position: relative;
+}
+
+.menu-nav_bar-container {
+    position: relative;
+}
+
+.menu_header {
+    width: 850px;
+}
+
+nav {
+    background-color: white;
+    border-bottom: 1px solid black;
+    padding: 0 80px 0 80px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    text-align: left;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 16px;
+}
+
+.menu-item-has-children a {
+    pointer-events: none;
+}
+
+.menu-item-has-children .sub-menu a {
+    pointer-events: all!important;
+}
+
+.sub-menu {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 180px;
+    left: 0;
+    top: 50px;
+    pointer-events: none;
+    opacity: 0;
+    background-color: #f7f7f7;;
+}
+
+.sub-menu li {
+    margin : 8px 0;
+}
+
+nav ul li:not(.menu-item-has-children) a:hover {
+    background: #ffb677;
+    color: white;
+}
+
+nav ul li.menu-item-has-children ul a:hover {
+    text-decoration: none;
+    color: #ffb677;
+    background: transparent;
+}
+
+li a:hover {
+    color: #ffb677;
+}
+
+li:hover .open-menu {
+    transform: rotate(180deg);
+}
+
+nav ul li:hover .sub-menu {
+    opacity: 1;
+    pointer-events: all;
+    height: auto;
+}
+
+/* accueil.php */
+
+.banner {
+    overflow: hidden;
+    position: relative
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, .2) ;
+    width: 100%;
+    height: 80vh;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.banner .candidate {
+    position: absolute;
+    top: 10%;
+    font-weight: 400;
+    font-size: 50px;
+    margin-left: 10%;
+    color: white;
+}
+
+.banner .text-image {
+    position: absolute;
+    top: 30%;
+    padding: auto;
+    display: block; 
+    text-align: center;
+}
+
+.banner .punchlines {
+    margin: 2% 0 5% 10%;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: white;
+    font-size: 18px;
+    text-align: left;
+}
+
+.background-text-home {
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 10%;
+    width: 600px;
+    height: 320px;
+}
+
+.banner .cta {
+    text-align: center;
+    border-radius: 10px;
+    background-color: #ffb677;
+    border-radius: 30px;
+    padding: 12px 25px 12px 25px;
+    width: 250px;
+}
+
+.banner .cta a {
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.program-text {
+    display: flex;
+    align-items: center;
+    margin: 20px 100px 20px 100px;
+    line-height: 1.5;
+}
+
+.program-text .right {
+    padding-left: 40px;
+}
+
+.ready {
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.program-button {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.program-button button {
+    padding: 15px 33px 15px 33px;
+}
+
+.program-button button a {
+    font-size: 18px;
+}
+
+.see-more-event, .see-more-actu {
+    text-align: right;
+    margin-right: 60px;
+    margin-bottom: 30px;
+}
+
+.see-more-event button, .see-more-actu button {
+    background-color: white;
+}
+
+.see-more-event button a, .see-more-actu button a {
+    color: black;
+}
+
+/* Page.php */
+
+.content-page {
+    width: 950px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.content-page p {
+    padding-bottom: 20px;
+}
+
+.content-page ul {
+    padding-bottom: 20px;
+}
+
+/* form */
+
+.nf-form-title {
+    display: none;
+}
+
+.nf-form-wrap.ninja-forms-form-wrap {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.nf-form-fields-required {
+    display: none;
+}
+
+.nf-field-element {
+    text-align: right;
+}
+
+#nf-field-9, #nf-field-4 {
+    background: #ffb677;
+    border-radius: 30px;
+    padding: 12px 35px 12px 35px;
+    cursor: pointer;
+}
+
+#nf-field-9:hover, #nf-field-4:hover {
+    color: white;
+    transition: none;
+}
+
+/* actu.php */
+
+.actu-thumbnail-image {
+    margin: auto;
+    width: 900px;
+}
+
+.actu-article {
+    display: flex;
+    margin: auto;
+}
+
+.actu-article .actu-thumbnail {
+    width: 400px;
+    margin: auto;
+}
+
+.actu-article .actu-text {
+    width: 400px;
+    margin: auto;
+    line-height: 150%;
+}
+
+.actu-article .actu-text .actu-title {
+    font-size: 30px;
+}
+
+.actu-article .actu-text .actu-info {
+    font-size: 15px;
+    font-style: italic;
+}
+
+/* Evenement */
+
+.section-title {
+    margin: 40px 100px 40px 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bar-title {
+    position: absolute;
+    border: 1px solid #ffb677;
+    width: 50px;
+    left: -70px;
+}
+
+h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    margin: 40px 100px 40px 100px;
+}
+
+article {
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.image-thumbnails {
+    position: relative;
+}
+
+.info-content {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+    height: 70px;
+    bottom: 5px;
+    padding: 0 10px 0 10px;
+    background: rgba(0, 0, 0, 0.3)
+}
+
+.date, .title {
+    color: #fff;
+}
+
+.day {
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+}
+
+.description {
+    text-align: right;
+}
+
+.description p {
+    line-height: 1.5;
+    text-align: left;
+}
+
+button {
+    padding: 12px 35px 12px 35px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 10px;
+    border: none;
+    background: #ffb677;
+    text-transform: uppercase;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* single.php */
+
+.info-publication {
+    margin: 0 0 30px 100px;
+    font-style: italic;
+}
+
+/* Footer */
+
+footer {
+    padding: 0 30px 0 30px;
+    border-top: 1px solid black;
+    height: 50px;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+footer li {
+    list-style-type: none;
+    padding: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
